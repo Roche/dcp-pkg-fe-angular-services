@@ -3,8 +3,8 @@
   "version": "17.0.0",
   "peerDependencies": {
     "@angular/core": "^17.0.0",
-    "@angular/router": "^17.0.0",
-    "@angular/common": "^17.0.0",
+    "@angular/router": "^22.2.6",
+    "@angular/common": "^22.2.6",
     "ngx-permissions": "^17.1.0",
     "@open-dcp/services": ">=1.2.0",
     "rxjs": "^7.8.2"
@@ -16,8 +16,8 @@
     "@open-dcp/services": ">=1.2.0",
     "@open-dcp/utilities": ">=1.1.2",
     "@angular/core": "^17.0.0",
-    "@angular/common": "^17.0.0",
-    "@angular/router": "^17.0.0",
+    "@angular/common": "^22.2.6",
+    "@angular/router": "^22.2.6",
     "ngx-permissions": "^17.1.0",
     "rxjs": "^7.8.2"
   },
