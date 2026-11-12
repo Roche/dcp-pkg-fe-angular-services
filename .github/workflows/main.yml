@@ -14,29 +14,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-        
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/checkout@v6
+
+      # Step 1: Build with Node 22 (compatible with Angular 17)
+      - name: Setup Node.js (Build Environment)
+        uses: actions/setup-node@v6
         with:
           node-version: 22
-          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build package
-        run: npm run build --if-present
+        run: npm run build
 
-      # Step 2: Switch to Node 22+ to provide an npm version that supports Trusted Publishing OIDC
+      # Step 2: Switch to Node 24 + npm 11.5.1+ for Trusted Publishing OIDC
       - name: Setup Node.js (Publish Environment)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 24
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Ensure npm supports OIDC Trusted Publishing
+        run: npm install -g npm@latest
+
       - name: Publish to npm
-        run: |
-          # Remove any static auth token line injected by setup-node into .npmrc
-          sed -i '/_authToken/d' /home/runner/work/_temp/.npmrc 2>/dev/null || true
-          npm publish --provenance --access public
+        working-directory: dist/open-dcp/angular-services
+        run: npm publish --provenance --access public
