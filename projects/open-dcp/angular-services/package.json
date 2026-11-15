@@ -1,25 +1,32 @@
 {
   "name": "@open-dcp/angular-services",
-  "version": "17.0.0",
+  "version": "17.3.1",
   "peerDependencies": {
+    "@angular/common": "^17.0.0",
     "@angular/core": "^17.0.0",
     "@angular/router": "^17.0.0",
-    "@angular/common": "^17.0.0",
-    "ngx-permissions": "^17.1.0",
     "@open-dcp/services": ">=1.2.0",
+    "ngx-permissions": "^17.1.0",
     "rxjs": "^7.8.2"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@angular/common": "^17.0.0",
+    "@angular/core": "^17.0.0",
+    "@angular/router": "^17.0.0",
     "@open-dcp/services": ">=1.2.0",
     "@open-dcp/utilities": ">=1.1.2",
-    "@angular/core": "^17.0.0",
-    "@angular/common": "^17.0.0",
-    "@angular/router": "^17.0.0",
     "ngx-permissions": "^17.1.0",
     "rxjs": "^7.8.2"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roche/dcp-pkg-fe-angular-services.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
