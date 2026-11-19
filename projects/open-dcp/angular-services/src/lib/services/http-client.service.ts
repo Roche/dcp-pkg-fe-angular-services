@@ -5,7 +5,11 @@ import { EMPTY, Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 export interface DcHttpConfig {
-  apiUrl: string;
+  /**
+   * @deprecated Not used by `DcHttp`, which only reads `gatewayUrl`.
+   * Will be removed in a future major version.
+   */
+  apiUrl?: string;
   gatewayUrl: string;
 }
 

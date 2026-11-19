@@ -21,3 +21,5 @@ export * from './routing';
 // Runtime theme (applies the platform theme as CSS custom properties)
 export * from './runtime-theme';
 
+// Runtime configuration (per-app loading, providers and bundle-relative URLs)
+export * from './runtime-config';
