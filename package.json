@@ -1,6 +1,6 @@
 {
   "name": "angular-services",
-  "version": "17.4.0",
+  "version": "17.4.1",
   "scripts": {
     "ng": "ng",
     "prestart": "npm install",
